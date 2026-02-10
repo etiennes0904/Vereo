@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veréo | Contact et devis</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-contact">
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <nav class="nav nav-left">
+        <a href="membrane.html">Membrane armée</a>
+        <a href="liner.html">Pose de liner</a>
+      </nav>
+      <div class="logo-area">
+        <a href="index.html" class="logo-link">
+          <img src="logo_vereo.png" alt="Veréo - Accueil" class="logo">
+        </a>
+      </div>
+      <button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false">
+        <span></span>
+      </button>
+      <nav class="nav nav-right">
+        <a href="professionnels.html">Professionnels</a>
+        <a href="contact.html">Contact</a>
+        <a class="cta" href="contact.html">Devis en ligne</a>
+      </nav>
+    </div>
+    <div id="mobile-menu" class="mobile-menu">
+      <a href="membrane.html">Membrane armée</a>
+      <a href="liner.html">Pose de liner</a>
+      <a href="professionnels.html">Professionnels</a>
+      <a href="contact.html">Contact</a>
+      <a class="cta" href="contact.html">Devis en ligne</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero hero-short" style="background-image: url('image_5.png');">
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <span class="eyebrow">Contactez-nous</span>
+        <h1>Demande de devis</h1>
+        <p class="subhead">Remplissez le formulaire ci-dessous, nous vous répondons sous 48h.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrapper">
+        <div class="grid-2 reveal">
+          <div class="contact-form-wrapper">
+            <form class="contact-form" action="#" method="POST">
+              <div class="form-group">
+                <label for="name">Nom complet</label>
+                <input type="text" id="name" name="name" required placeholder="Votre nom">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="votre@email.com">
+              </div>
+              <div class="form-group">
+                <label for="phone">Téléphone</label>
+                <input type="tel" id="phone" name="phone" placeholder="06 00 00 00 00">
+              </div>
+              <div class="form-group">
+                <label for="service">Type de prestation</label>
+                <select id="service" name="service" required>
+                  <option value="">Sélectionnez une option</option>
+                  <option value="membrane">Pose de membrane armée</option>
+                  <option value="liner">Pose de liner</option>
+                  <option value="autre">Autre demande</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="location">Localisation du chantier</label>
+                <input type="text" id="location" name="location" placeholder="Ville ou département">
+              </div>
+              <div class="form-group full-width">
+                <label for="message">Description du projet</label>
+                <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet : dimensions du bassin, type de structure, travaux souhaités..."></textarea>
+              </div>
+              <button type="submit" class="btn primary">Envoyer ma demande</button>
+            </form>
+          </div>
+          <div class="contact-info">
+            <h3>Informations de contact</h3>
+            <div class="contact-item">
+              <strong>Téléphone</strong>
+              <span>06 00 00 00 00</span>
+            </div>
+            <div class="contact-item">
+              <strong>Email</strong>
+              <span>contact@vereo.fr</span>
+            </div>
+            <div class="contact-item">
+              <strong>Zone d'intervention</strong>
+              <span>France entière</span>
+            </div>
+            <div class="card" style="margin-top: 32px; background: rgba(255,255,255,0.1); border: none;">
+              <h4 style="color: #fff; margin-bottom: 12px;">Réponse rapide</h4>
+              <p style="margin-bottom: 0; color: rgba(255,255,255,0.8);">Nous nous engageons à vous répondre sous 48h ouvrées avec un devis détaillé.</p>
+            </div>
+            <div class="card" style="margin-top: 16px; background: rgba(255,255,255,0.1); border: none;">
+              <h4 style="color: #fff; margin-bottom: 12px;">Devis gratuit</h4>
+              <p style="margin-bottom: 0; color: rgba(255,255,255,0.8);">Tous nos devis sont gratuits et sans engagement de votre part.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-dark sm-pad">
+      <div class="wrapper reveal" style="text-align: center;">
+        <span class="eyebrow">Garantie</span>
+        <h2>Assurance décennale sur tous nos chantiers</h2>
+        <p style="max-width: 700px; margin: 24px auto 0;">Tous nos travaux sont couverts par notre assurance décennale. Vous bénéficiez d'une protection complète pendant 10 ans après la réception du chantier.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="wrapper">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img src="logo_vereo.png" alt="Logo Veréo" class="footer-logo">
+            <p>Experts en étanchéité piscine. Pose de membrane armée et liner sur toute la France avec garantie décennale.</p>
+          </div>
+          <div class="footer-links-grid">
+            <div class="footer-col">
+              <h4>Services</h4>
+              <a href="membrane.html">Membrane armée</a>
+              <a href="liner.html">Pose de liner</a>
+              <a href="professionnels.html">Espace pro</a>
+            </div>
+            <div class="footer-col">
+              <h4>Liens</h4>
+              <a href="index.html">Accueil</a>
+              <a href="contact.html">Contact</a>
+              <a href="contact.html">Devis gratuit</a>
+            </div>
+            <div class="footer-col">
+              <h4>Contact</h4>
+              <span class="footer-phone">06 00 00 00 00</span>
+              <span>France entière</span>
+              <a href="contact.html" class="btn primary sm">Devis en ligne</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="wrapper">
+        <span>2026 Veréo. Tous droits réservés.</span>
+        <span>Assurance décennale incluse sur tous nos chantiers</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
