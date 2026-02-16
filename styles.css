@@ -105,10 +105,19 @@ p { margin: 0 0 20px; color: var(--text-muted); line-height: 1.85; font-size: 18
 }
 .logo {
   height: 110px;
-  transition: transform 0.2s;
+  transition: transform 0.2s ease, height 0.2s ease;
 }
 .logo:hover {
   transform: scale(1.02);
+}
+
+body.scrolled .logo {
+  height: 124px;
+  transform: none;
+}
+
+body.scrolled .topbar-inner {
+  height: 130px;
 }
 
 .nav {
@@ -152,9 +161,14 @@ p { margin: 0 0 20px; color: var(--text-muted); line-height: 1.85; font-size: 18
   transition: background 0.2s;
   border: none;
   box-shadow: 0 10px 20px rgba(16,185,129,0.35);
+  border-radius: 6px;
 }
 .nav .cta:hover { background: var(--accent-dark); }
 .nav .cta::after { display: none; }
+
+body.scrolled .nav .cta {
+  transform: none;
+}
 
 .menu-toggle {
   display: none;
@@ -200,6 +214,7 @@ p { margin: 0 0 20px; color: var(--text-muted); line-height: 1.85; font-size: 18
 .mobile-menu .cta {
   margin: 12px 24px 20px;
   display: inline-flex;
+  border-radius: 6px;
 }
 
 /* Active states */
@@ -279,6 +294,9 @@ section.lg-pad { padding: 140px 0; }
   margin-bottom: 40px;
   line-height: 1.8;
 }
+.hero .subhead.subhead-strong {
+  font-weight: 800;
+}
 .hero .eyebrow {
   background: rgba(16,185,129,0.2);
   border-color: var(--green-400);
@@ -307,6 +325,7 @@ section.lg-pad { padding: 140px 0; }
   transition: all 0.2s ease;
   cursor: pointer;
   border: 2px solid transparent;
+  border-radius: 6px;
 }
 .btn.primary { background: var(--accent); color: white; border-color: var(--accent); }
 .btn.primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
@@ -328,6 +347,20 @@ section.lg-pad { padding: 140px 0; }
 
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
 .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+.thickness-cards {
+  display: flex;
+  gap: 60px;
+  align-items: stretch;
+}
+
+.thickness-cards .thickness-card {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+}
+
 
 /* =============================================
    FEATURE
@@ -422,6 +455,34 @@ section.lg-pad { padding: 140px 0; }
   padding: 24px 0;
 }
 .brands-bar span { font-size: 18px; font-weight: 700; letter-spacing: 0.05em; opacity: 0.9; }
+.brands-bar img {
+  height: 64px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+.brands-bar img.brand-logo-lg {
+  height: 128px;
+  max-width: 240px;
+}
+
+.brands-light {
+  background: #fff;
+}
+
+.brands-light h2,
+.brands-light p,
+.brands-light span {
+  color: var(--text);
+}
+
+.brands-light .eyebrow {
+  background: var(--green-100);
+  color: var(--green-500);
+  border-color: var(--green-500);
+}
 
 /* =============================================
    FORMS
@@ -467,6 +528,65 @@ section.lg-pad { padding: 140px 0; }
 .contact-item { margin-bottom: 20px; }
 .contact-item strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.5); margin-bottom: 4px; }
 .contact-item span { font-size: 16px; color: #fff; }
+
+.reviews {
+  margin-top: 72px;
+  padding-top: 8px;
+}
+
+.reviews h3 {
+  margin-bottom: 20px;
+  color: var(--text);
+  font-size: 20px;
+  text-align: center;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.reviews-inline {
+  margin-top: 72px;
+}
+
+.reviews-inline .reviews-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.review-card {
+  border: 1px solid #e6eefb;
+  padding: 22px 22px 18px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(1, 53, 122, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.review-card p {
+  margin-bottom: 16px;
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 92px;
+}
+
+.review-card span {
+  font-weight: 600;
+  color: var(--text);
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.review-card span::before {
+  content: "★";
+  color: var(--accent);
+  font-size: 14px;
+}
 
 /* =============================================
    FOOTER
@@ -593,5 +713,6 @@ section.lg-pad { padding: 140px 0; }
   .hero-content { padding: 40px 24px; }
   .brands-bar { gap: 24px; }
   .brands-bar span { font-size: 15px; }
+  .brands-bar img { height: 52px; }
   .contact-info { padding: 32px 24px; }
 }

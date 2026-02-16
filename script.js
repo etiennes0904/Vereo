@@ -41,6 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const body = document.body;
   const menu = document.getElementById('mobile-menu');
 
+  const updateScrolledState = () => {
+    body.classList.toggle('scrolled', window.scrollY > 10);
+  };
+
+  updateScrolledState();
+  window.addEventListener('scroll', updateScrolledState, { passive: true });
+
   if (!toggle || !menu) return;
 
   toggle.addEventListener('click', () => {
