@@ -693,6 +693,8 @@ section.lg-pad { padding: 140px 0; }
   .footer-content { flex-direction: column; align-items: center; gap: 24px; }
   .footer-links-grid { grid-template-columns: repeat(3, 1fr); }
   .feature-img { min-height: 350px; }
+  /* Reviews: switch inline 4-col reviews to 2x2 on tablet widths */
+  .reviews-inline .reviews-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 900px) {
@@ -720,6 +722,11 @@ section.lg-pad { padding: 140px 0; }
   .brands-bar span { font-size: 15px; }
   .brands-bar img { height: 52px; }
   .contact-info { padding: 32px 24px; }
+  /* Stack membrane thickness cards full-width on small screens */
+  .thickness-cards { flex-direction: column; gap: 24px; }
+  .thickness-cards .thickness-card { min-height: auto; width: 100%; }
+  /* Reviews: single column on narrow screens */
+  .reviews-grid { grid-template-columns: 1fr; }
 }
 
 /* Footer - centrer la phrase descriptive et réduire la hauteur */
