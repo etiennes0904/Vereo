@@ -721,6 +721,18 @@ section.lg-pad { padding: 140px 0; }
 }
 .social-link--linkedin:hover { transform: translateY(-3px) scale(1.06); box-shadow: 0 10px 26px rgba(0,0,0,0.22); }
 
+/* Make Facebook and Instagram icons larger (desktop + mobile) */
+.social-link[aria-label="Facebook"],
+.social-link[aria-label="Instagram"] {
+  width: clamp(64px, 9vw, 88px);
+  height: clamp(64px, 9vw, 88px);
+}
+.social-link[aria-label="Facebook"] svg,
+.social-link[aria-label="Instagram"] svg {
+  width: 72%;
+  height: 72%;
+}
+
 /* Allow specific images to display fully (no cropping) */
 .feature-img.full-img {
   object-fit: contain;
@@ -823,6 +835,17 @@ section.lg-pad { padding: 140px 0; }
     left: 0;
     right: 0;
     z-index: 1100;
+  }
+  /* Ensure social icons are at least 2x larger on small screens */
+  .social-link[aria-label="Facebook"],
+  .social-link[aria-label="Instagram"] {
+    width: 72px; /* at least double the original ~36px */
+    height: 72px;
+  }
+  .social-link[aria-label="Facebook"] svg,
+  .social-link[aria-label="Instagram"] svg {
+    width: 78%;
+    height: 78%;
   }
   body { padding-top: 96px; }
   body.scrolled { padding-top: 130px; }
